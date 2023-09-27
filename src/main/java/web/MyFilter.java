@@ -46,13 +46,13 @@ public class MyFilter extends HttpFilter implements Filter {
 		
 		else if(user.equals("zawtun")&& pswd.equals("1234")) {
 			Cookie c = new Cookie("user", user);
-			Cookie exp = new Cookie("date", "123");
+		
 			HttpServletResponse httpResponse = (HttpServletResponse) response;
 			httpResponse.setContentType("text/html");
 			httpResponse.addCookie(c);
-			httpResponse.addCookie(exp);
+		
 			System.out.println(user + " \n" + pswd + "\n");
-			out.println("<p style=\"color:Red;font-size:30px;text-align:center\">Success </p>");
+			out.println("<p style=\"color:Blue;font-size:50px;text-align:center\"> " + ( "\n" +" SUCCESS"));
 		}else {
 			response.setContentType("text/html");
    			out.println("<p style=\"color:Red;font-size:30px;text-align:center\"> " + ("\n" +"404 ERROR"));
